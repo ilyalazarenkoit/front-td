@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { Users } from './Users/Users';
 import { Header } from './NavMenu/NavMenu';
-// import { refresh } from 'redux/authOperations';
+
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchUsers } from 'redux/operations';
@@ -16,14 +16,11 @@ export const App = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const dispatch = useDispatch();
   const token = useSelector(selectToken);
-  // useEffect(() => {
-  //   dispatch(refresh());
-  // }, [dispatch]);
   useEffect(() => {
     if (isLoggedIn) {
       dispatch(fetchUsers(token));
     }
-  }, [dispatch, isLoggedIn]);
+  }, [dispatch, isLoggedIn, token]);
 
   return (
     <>
