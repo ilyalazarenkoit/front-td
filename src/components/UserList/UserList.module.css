@@ -1,0 +1,44 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 160px;
+  padding-right: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(151, 151, 151);
+  border-radius: 10px;
+}
+
+.user {
+  display: flex;
+  gap: 10px;
+  justify-content: baseline;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 500px;
+}
+
+.text {
+  color: white;
+}
+
+.delete {
+  margin-left: auto;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition-duration: 0.5s;
+  color: grey;
+}
+
+.delete:hover,
+.delete:focus {
+  transform: scale(1.1);
+}
